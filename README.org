@@ -151,12 +151,12 @@
 
    Tillicum has tools for entering an interactive debugger session
    either when an unhandled exception is raised, or when a signal is
-   sent to the process. These use stdin / stdout, so it’s best to run
-   your code in the foreground when using them.
+   sent to the process. These use stdin / stdout, so you’ll need to
+   run your code in the foreground when using them.
 
-   When using the signal-based debuggers, the any extant signal
-   handlers will be saved and restored as the =debug_on_signal= code
-   is entered and exited.
+   When using the signal-based debuggers, any extant signal handlers
+   will be saved and restored as the =debug_on_signal= code is entered
+   and exited.
 
    As with most of the other parts of Tillicum, they can be used as
    decorators or context managers.
@@ -222,9 +222,9 @@
 
 ** They go better together
 
-   All the tools in Tillicum are designed to do one thing and are
-   compose well. For example, to delay when errors begin to occur and
-   retry, just compose those two functions:
+   All the tools in Tillicum are designed to do one thing and compose
+   well. For example, to delay when errors begin to occur and retry,
+   just compose those two functions:
 
 #+BEGIN_SRC python
   @retry()
